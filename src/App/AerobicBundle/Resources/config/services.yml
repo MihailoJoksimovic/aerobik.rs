@@ -1,0 +1,7 @@
+parameters:
+#    aerobic.example.class: App\AerobicBundle\Example
+
+services:
+#    aerobic.example:
+#        class: %aerobic.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
