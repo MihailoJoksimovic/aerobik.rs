@@ -1,0 +1,6 @@
+[submodule "symfony2-vagrant"]
+	path = symfony2-vagrant
+	url = git@github.com:MihailoJoksimovic/symfony2-vagrant.git
+[submodule "sf2-vagrant"]
+	path = sf2-vagrant
+	url = https://github.com/irmantas/symfony2-vagrant.git
