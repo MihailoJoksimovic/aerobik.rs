@@ -18,4 +18,5 @@ Vagrant::Config.run do |config|
         puppet.options = ['--verbose']
 	end
 
+    config.vm.provision "shell", path: "provision.sh"
 end
