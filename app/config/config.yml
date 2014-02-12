@@ -34,11 +34,11 @@ services:
     pdo:
         class: PDO
         arguments:
-            dsn:      "mysql:dbname=aerobic_dev"
-            user:     root
-            password: ''
+            dsn:      "mysql:dbname=%database_name%"
+            user:     "%database_user%"
+            password: "%database_password%"
         calls:
-            - [setAttribute, [3, 2]] 
+            - [setAttribute, [3, 2]]
 
     session.handler.pdo:
         class:     Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
