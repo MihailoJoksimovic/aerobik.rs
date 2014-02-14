@@ -92,3 +92,8 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: App\AerobicBundle\Entity\User
+
+fos_message:
+    db_driver: orm
+    thread_class: App\AerobicBundle\Entity\Thread
+    message_class: App\AerobicBundle\Entity\Message

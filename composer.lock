@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4090317c08b5b7886f92a134843c09bf",
+    "hash": "420643af25580b068ab757a7ba7d999f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -740,6 +740,67 @@
                 "orm"
             ],
             "time": "2013-11-12 12:40:13"
+        },
+        {
+            "name": "friendsofsymfony/message-bundle",
+            "version": "dev-master",
+            "target-dir": "FOS/MessageBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfSymfony/FOSMessageBundle.git",
+                "reference": "bd3a2b2ba11b8724f079c1379bb3a94e59cb1b68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSMessageBundle/zipball/bd3a2b2ba11b8724f079c1379bb3a94e59cb1b68",
+                "reference": "bd3a2b2ba11b8724f079c1379bb3a94e59cb1b68",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/form": "~2.1",
+                "symfony/framework-bundle": "~2.1",
+                "symfony/security": "~2.1",
+                "symfony/twig-bundle": "~2.1"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "dev-master",
+                "doctrine/mongodb-odm-bundle": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FOS\\MessageBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thibault Duplessis",
+                    "email": "thibault.duplessis@gmail.com",
+                    "homepage": "http://ornicar.github.com"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSMessageBundle/contributors"
+                }
+            ],
+            "description": "Provides user-to-user messaging features for your Symfony2 application.",
+            "homepage": "https://github.com/FriendsOfSymfony/FOSMessageBundle",
+            "keywords": [
+                "message",
+                "messaging",
+                "symfony"
+            ],
+            "time": "2014-01-22 22:52:42"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -1732,7 +1793,8 @@
     "stability-flags": {
         "friendsofsymfony/user-bundle": 20,
         "doctrine/migrations": 20,
-        "doctrine/doctrine-migrations-bundle": 20
+        "doctrine/doctrine-migrations-bundle": 20,
+        "friendsofsymfony/message-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
