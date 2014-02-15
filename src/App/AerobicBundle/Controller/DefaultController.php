@@ -11,9 +11,9 @@ class DefaultController extends Controller
         $userService = $this->get('user_service');
         $user = $userService->getLoggedInUser();
 
-        $message = 'Hello bitch (you are not logged in, so you are a bitch).';
+        $message = 'Welcome to aerobic';
         if (isset($user)) {
-            $message = 'Hello ' . $user->getUsername();
+            $message .= ', ' . $user->getUsername();
         }
         return $this->render('AerobicBundle:Default:index.html.twig', array('message' => $message));
     }

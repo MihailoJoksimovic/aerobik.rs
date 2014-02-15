@@ -6,7 +6,6 @@
 
         <title>{% block title %}AEROBIK{% endblock %}</title>
 
-        <link href="/aerobik.rs/web/bundles/aerobic/css/bootstrap.css" rel="stylesheet">
         {% stylesheets '@AerobicBundle/Resources/public/css/*' filter='cssrewrite' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
@@ -29,11 +28,14 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class=""><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
-                        <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
-                        <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                            <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                        {% else %}
+                            <li class=""><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
+                            <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+                        {% endif %}
                     </ul>
-                </div><!--/.nav-collapse -->
+                </div>
             </div>
 
             {% block body %}
